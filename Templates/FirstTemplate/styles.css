@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    max-width: 100vw;
+}
+
+.font_size_18{
+    font-size: 18px;
+}
+
+.container {
+    max-width: 70vw;
+    margin: auto;
+}
+.navigation {
+    background-color: #EFEFEF;
+    padding: 10px 0;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul li {
+    margin-right: 30px;
+    color: #333;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: inherit;
+
+}
+.navigation ul li a:hover {
+    color: #66C05D;
+    text-shadow: 1px 1px 2px black, 0 0 1em #66C05D;
+}
+
+.header {
+    padding-top: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 2fr;
+    grid-template-areas: "left right"
+                         "bottom bottom";
+}
+
+.logo {
+    grid-area: left;
+    display: flex;
+    /*justify-content: center;*/
+    padding-left: 25%;
+}
+.logo img{
+    width: 80px;
+    height: 80px;
+    /*margin-left: 200px;*/
+}
+.logo h1 {
+   height: 1em;
+    margin-top: 22px;
+    margin-left: 20px;
+    color: #66C05D;
+    letter-spacing: 3px;
+}
+.header_contact {
+    grid-area: right;
+    position: relative;
+}
+.contact_positioned {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+.header_contact .contact {
+    width: 50%;
+    position: absolute;
+}
+.contact span {
+    margin-right: 8%;
+}
+.contact button {
+    padding: 8px 16px;
+    border: 2px solid #66C05D;
+    border-radius: 40px;
+    background-color: transparent;
+}
+
+.categories {
+    grid-area: bottom;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #EFEFEF;
+
+}
+
+.categories ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.categories ul li{
+    margin-right: 40px;
+    font-size: 14px;
+}
+
+.sale {
+    background: center / cover no-repeat url("files/Frame_2.png") #66C05D;
+    max-width: 100%;
+    max-height: 800px;
+    min-height: 500px;
+    color: #fff;
+}
+
+.sale h2 {
+    font-size: 2em;
+    margin-bottom: 10%;
+}
+.sale p{
+    margin-bottom: 10%;
+    font-size: 14px;
+}
+
+.sale .container {
+    position: relative;
+    height: 100%;
+}
+
+.sale_text_wrap {
+    padding-top: 15%;
+    width: 40%;
+    min-height: 500px;
+
+}
+
+.sale button{
+    padding: 8px 50px;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    background-color: transparent;
+    color: #fff
+}
+
+.bg_gray{
+    background-color: #EFEFEF;
+}
+
+.goods {
+    padding-top: 8%;
+}
+
+.goods_heading {
+    padding: 0 3% 1% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods_items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods_item{
+    padding: 2em .5em 0 .5em;
+    background-color: #fff;
+    width: 23%;
+    text-align: center;
+}
+.goods_item >* {
+margin-bottom: 1.5em;
+}
+.buy_button {
+    padding: 8px 40px;
+    border: none;
+    border-radius: 40px;
+    background-color: #66C05D;
+    color: #fff ;
+}
+
+.contact_interaction  .container{
+    padding-top: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe, .shops{
+    width: 48.6%;
+    background-color: #66C05D;
+    padding: 2.5em;
+    color: #fff;
+    margin-bottom: 15%;
+
+}
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subscribe h4, .shops h4 {
+    font-size: 18px;
+    line-height: 21px;
+}
+.subscribe img {
+    width: 140px;
+    height: 140px;
+}
+
+.subscribe input {
+    border-radius: 40px;
+    border: none;
+    padding: .7em 2em .7em 3em;
+    margin-bottom: 0 ;
+    width: 85%;
+    outline: none;
+}
+
+.subscribe_wrapper {
+    width: 65%;
+}
+
+.subscribe_wrapper >* {
+    margin-bottom: 10%;
+}
+
+.shops button{
+    padding: .7em 2em .7em 2em;
+    border-radius: 40px;
+    border: none;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+
+.footer_contacts .container {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 0;
+}
+.footer_contacts .contact {
+    display: flex;
+    width: 22vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer_contacts .address {
+    width: 25vw;
+    text-align: right;
+}
+
+.social-networks a{
+    text-decoration: none;
+    margin-right: .5em;
+}
+
+
+.confidential .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 0;
+}
+.confidential  p {
+    font-size: 12px;
+    color: #828282;
+    letter-spacing: -.05em;
+}
