@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+
+  function aclean(arr) {
+    let map = new Map();
+
+    for (let word of arr) {
+      let sorted = word.toLowerCase().split("").sort().join("");
+      map.set(sorted, word);
+    }
+    return Array.from(map.values());
+  }
+
+  // let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+  //
+  // function aclean(arr) {
+  //   let map = {}
+  //
+  //   for (let word of arr) {
+  //
+  //     let sorted = word.toLowerCase().split("").sort().join("");
+  //     map[sorted] = word;
+  //   }
+  //
+  //   return Array.from(Object.values(map));
+  // }
+
+  let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+  console.log(aclean(arr))
+</script>
+</body>
+</html>
